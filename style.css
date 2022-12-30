@@ -1,0 +1,458 @@
+/* ------------------------------- GENERAL STYLES ----- */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-width: 400px;
+    color: rgb(40, 40, 40);
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h2,
+h3,
+h4,
+.header-logo a,
+.header-nav .menu,
+.more,
+input[type="submit"],
+.featured-post a {
+    font-family: "Amatic SC", serif;
+}
+
+/* --------------------------------- HEADER STYLES ----- */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    padding: 2em;
+    background-color: rgb(188, 223, 215);
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo a {
+    color: rgb(0, 128, 128);
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header-logo img {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin-right: 1em;
+}
+
+.header-nav .menu {
+    display: inline-block;
+    margin-left: 1.25em;
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.header-nav .menu:hover {
+    box-shadow: inset 0 -0.4em rgb(249, 169, 2);
+}
+
+.header-nav .icon {
+    display: none;
+    border: none;
+    background-color: transparent;
+    color: rgb(0, 128, 128);
+    font-size: 1.5em;
+}
+
+.header-nav .icon:hover {
+    color: rgb(249, 169, 2);
+}
+
+/* ------------------------------------ MAIN STYLES ----- */
+
+main {
+    height: 100%;
+}
+
+.content {
+    float: left;
+    width: 70%;
+    border-right: 2px dotted rgb(188, 223, 215);
+}
+
+aside {
+    float: right;
+    width: 30%;
+    padding: 3em 2em;
+}
+
+/* --------------------------- FEATURED IMAGE STYLES ----- */
+
+.featured {
+    padding: 3em 2em;
+}
+
+.featured-post {
+    position: relative;
+    height: 20em;
+    max-height: 50%;
+    width: 100%;
+    border-radius: 0.5em;
+    box-shadow: 0 0 0.5em 0.5em rgb(129, 182, 172);
+    /* --- Photo by Pixabay on Pexels --- */
+    background: url("https://images.pexels.com/photos/57416/cat-sweet-kitty-animals-57416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") center;
+    background-size: cover;
+}
+
+.featured-post a {
+    position: absolute;
+    bottom: 0.75em;
+    width: 100%;
+    padding: 1em 0.5em;
+    background-color: rgba(188, 223, 215, 0.6);
+    font-size: 1.25em;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* ----------------------------------- POST GRID STYLES ----- */
+
+.posts {
+    padding: 1.5em;
+}
+
+.posts ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1em;
+}
+
+.posts ul li {
+    position: relative;
+    border: 1px solid rgb(188, 223, 215);
+    border-radius: 0.5em;
+    padding-bottom: 1em;
+    list-style-type: none;
+}
+
+.posts ul li figure {
+    position: relative;
+    max-height: 250px;
+    border-radius: 0.5em 0.5em 0 0;
+    overflow: hidden;
+}
+
+.posts ul li figure img {
+    width: 100%;
+}
+
+.posts ul li figure figcaption {
+    position: absolute;
+    bottom: 0.75em;
+    width: 100%;
+    background-color: rgba(188, 223, 215, 0.8);
+}
+
+.posts ul li figure figcaption h3 {
+    padding: 0.5em;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.posts ul li .category,
+.posts ul li i,
+.posts ul li .tag {
+    color: rgb(129, 182, 172);
+}
+
+.posts ul li .category {
+    padding: 1em 0 0 18px;
+    font-weight: 600;
+}
+
+.posts ul li .fa-tag {
+    margin: 0 0.5em 0 18px;
+}
+
+.posts ul li .tag {
+    font-style: italic;
+}
+
+.posts ul li .excerpt {
+    padding: 1em;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.posts ul li .more {
+    position: relative;
+    padding: 0.25em 0.5em;
+    border-radius: 0.5em;
+    margin: 0.75em;
+    color: white;
+    background-color: rgb(0, 128, 128);
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.posts ul li .more:hover {
+    background-color: rgb(188, 223, 215);
+    color: inherit;
+}
+
+.posts ul li .fa-heart {
+    position: absolute;
+    right: 1.5em;
+    top: 1em;
+    color: rgba(255, 192, 203, 0.6);
+    font-size: 1.5em;
+}
+
+/* -------------------------------- SIDEBAR STYLES ----- */
+
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.5em;
+    padding: .5em .75em;
+    background-color: rgb(188, 223, 215);
+    color: rgb(0, 128, 128);
+}
+
+.search-wrapper input {
+    width: 100%;
+    border: none;
+    outline: none;
+    margin: 0 .5em;
+    padding: .5em;
+    background-color: rgb(188, 223, 215);
+    color: inherit;
+    font-size: 1em;
+}
+
+::placeholder {
+    color: rgb(129, 182, 172);
+}
+
+aside h3 {
+    display: inline-block;
+    padding-top: 1em;
+    margin-bottom: 1em;
+    box-shadow: inset 0 -0.4em rgb(249, 169, 2);
+    font-weight: bold;
+    font-size: 1.75em;
+}
+
+aside .categories li {
+    margin-left: -1em;
+    line-height: 1.5;
+}
+
+aside .categories i {
+    color: rgb(249, 169, 2);
+    font-size: 0.75em;
+}
+
+aside .categories a:hover,
+aside .follow a:hover {
+    color: rgb(249, 169, 2);
+}
+
+aside .tags .tags-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+aside .tags a {
+    border-radius: 0.5em;
+    padding: 0.5em 0.75em;
+    margin: 0 1em 1em 0;
+    background-color: rgb(188, 223, 215);
+    font-style: italic;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+aside .tags a:hover {
+    background-color: rgba(188, 223, 215, 0.4);
+}
+
+.follow-wrapper {
+    padding: 1em 0.75em;
+    border-radius: 0.5em;
+    background-color: rgba(188, 223, 215, 0.4);
+}
+
+.follow-wrapper h4 {
+    margin: 0.5em 0 0.75em 0;
+    color: rgb(0, 128, 128);
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.follow-wrapper #follower-name,
+.follow-wrapper #follower-email {
+    width: 100%;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    border: 1px dotted rgb(0, 128, 128);
+    color: rgb(0, 128, 128);
+    font-size: 1em;
+    outline: none;
+}
+
+.follow-wrapper input[type="checkbox"] {
+    width: unset;
+    margin-right: 0.5em;
+}
+
+.follow-wrapper span {
+    font-size: 0.75em;
+}
+
+.follow-wrapper span a {
+    font-style: italic;
+}
+
+.follow-wrapper input[type="submit"] {
+    display: block;
+    margin: 1em auto;
+    border: none;
+    padding: 0.25em 0.5em;
+    border-radius: 0.5em;
+    background-color: rgb(0, 128, 128);
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.follow-wrapper input[type="submit"]:hover {
+    color: inherit;
+    background-color: rgb(188, 223, 215);
+    cursor: pointer;
+}
+
+/* ----------------------------------- FOOTER STYLES ----- */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    float: left;
+    height: 3em;
+    background-color: rgb(0, 128, 128);
+}
+
+footer p {
+    color: white;
+    font-size: 0.75em;
+}
+
+footer .fa-heart {
+    color: pink;
+}
+
+/* --------------------------------- FOR OTHER DEVICES ----- */
+
+@media screen and (max-width: 1024px) {
+    .header {
+        padding: 2em 3em;
+    }
+
+    .header-nav .menu {
+        display: none;
+    }
+
+    .header-nav .icon {
+        display: inline-block;
+    }
+
+    .content {
+        width: 100%;
+        border: none;
+        padding: 1em;
+    }
+
+    .featured {
+        padding: 1.5em;
+    }
+
+    aside {
+        width: 100%;
+        padding: 3em;
+    }
+
+    aside .categories {
+        width: 50%;
+        float: left;
+    }
+
+    aside .tags {
+        width: 50%;
+        float: right;
+    }
+
+    aside .follow {
+        width: 100%;
+        float: left;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .header a {
+        font-size: 1.5em;
+    }
+
+    .posts ul li .category,
+    .posts ul li .fa-tag,
+    .posts ul li .tag {
+        font-size: 1em;
+    }
+
+    .posts ul li .category {
+        padding: 1em 0 0 16px;
+        font-weight: bold;
+    }
+
+    .posts ul li .fa-tag {
+        margin: 0 0.5em 0 16px;
+    }
+
+    aside {
+        padding: 2em 3em;
+    }
+
+    aside .categories,
+    aside .tags {
+        width: 100%;
+    }
+
+}
